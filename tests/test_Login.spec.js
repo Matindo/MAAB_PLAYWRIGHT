@@ -3,10 +3,10 @@ import { test, expect } from '@playwright/test';
 // Parse the .env file into variables in our script
 const user = process.env.USERNAME
 const pass = process.env.PASSWORD
-const url = process.env.URL
+const link = process.env.URL
 
 test('det env login test', async ({ page, request }) => {
-  await page.goto(url);
+  await page.goto(link);
   await page.locator('#userName').click();
   await page.locator('#userName').fill(user);
   await page.locator('#password').click();
